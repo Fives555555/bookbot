@@ -13,6 +13,17 @@ def get_book_text(filepath):
         file_contents = f.read()
     return file_contents
 
+def word_count(filecontents):
+    """Count the number of words in a string
+
+    Args:
+        filecontents (string): Contents of a file as a string
+
+    Returns:
+        int: Number of words in the input string
+    """
+    return len(filecontents.split())
+
 
 def main(filepath):
     """Print contents of text file to console
