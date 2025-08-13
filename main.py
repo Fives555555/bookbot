@@ -1,4 +1,4 @@
-
+from stats import word_count
 
 def get_book_text(filepath):
     """Return contents of text file as a string from the filepath
@@ -12,18 +12,6 @@ def get_book_text(filepath):
     with open(filepath) as f:
         file_contents = f.read()
     return file_contents
-
-def word_count(filecontents):
-    """Count the number of words in a string
-
-    Args:
-        filecontents (string): Contents of a file as a string
-
-    Returns:
-        int: Number of words in the input string
-    """
-    return len(filecontents.split())
-
 
 def main(filepath):
     """Print word count of text file to console

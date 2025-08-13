@@ -3,3 +3,6 @@ bookbot.code-workspace
 
 # Book data
 /books
+
+# Pycache
+/__pycache__
