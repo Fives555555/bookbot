@@ -26,15 +26,16 @@ def word_count(filecontents):
 
 
 def main(filepath):
-    """Print contents of text file to console
+    """Print word count of text file to console
 
     Args:
         filepath (string): Path to text file to be read
 
     Returns:
-        print(string): Prints contents of file as a string
+        print(string): Prints word count of file
     """
-    return print(get_book_text(filepath))
+    num_words = word_count(get_book_text(filepath))
+    return print(f"{num_words} words found in the document")
 
 
 main("books/frankenstein.txt")
