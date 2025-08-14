@@ -61,4 +61,4 @@ z: 235
 
 ## Data
 
-The [Project Gutenberg](https://www.gutenberg.org/) library provides free eBooks which can be downloaded as $~$ ```.txt``` files and analysed with BookBot.
+The [Project Gutenberg](https://www.gutenberg.org/) library provides free eBooks which can be downloaded as ```.txt``` files and analysed with BookBot.
