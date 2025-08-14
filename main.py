@@ -1,3 +1,4 @@
+import sys
 from stats import word_count, character_count, sort_dict
 
 def get_book_text(filepath):
@@ -22,8 +23,9 @@ def main(filepath):
     Returns:
         print(string): Prints report of word and alphabetical character count of text file
     """
-    num_words = word_count(get_book_text(filepath))
-    character_dict = character_count(get_book_text(filepath))
+    book_text = get_book_text(filepath)
+    num_words = word_count(book_text)
+    character_dict = character_count(book_text)
     sorted_list = sort_dict(character_dict)
     
     print(f"============ BOOKBOT ============ \nAnalyzing book found at {filepath}...")
@@ -36,4 +38,8 @@ def main(filepath):
             
     print("============= END ===============")
 
-main("books/frankenstein.txt")
+if len(sys.argv) < 2:
+    print("Usage: python3 main.py <path_to_book>")
+    sys.exit(1)
+
+main(sys.argv[1])
