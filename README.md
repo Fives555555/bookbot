@@ -10,7 +10,7 @@ BookBot requires a standard Python 3 installation.
 
 ## Usage
 
-A call to the main Python file is required, followed by the path to the text file you wish to analyse. For example:
+A command line call to the main Python file is required, followed by the path to the text file you wish to analyse. For example:
 
 ```console
 user:~/bookbot$ python main.py <path-to-.txt-file>
