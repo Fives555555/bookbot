@@ -26,3 +26,31 @@ def character_count(filecontents):
             character_dict[character] = 1
 
     return character_dict
+
+def sort_on(items):
+    """Function to take a dictionary and return the value of the "num" key. This is for the .sort() method to use to sort a list of dictionaries
+
+    Args:
+        items (dict): A dictionary with a "num" key
+
+    Returns:
+        int: value of "num" key 
+    """
+    return items["num"]
+
+def sort_dict(dict):
+    """Take a dictionary of characters and their counts and return a sorted list of dictionaries from greatest number of characters to least
+
+    Args:
+        dict (dict): Dictionary of characters and their counts
+
+    Returns:
+        list: List of dictionaries sorted from greatest to least by count
+    """
+    dict_list = []
+    for item in dict:
+        temp_dict = {"char": item, "num": dict[item]}
+        dict_list.append(temp_dict)
+        
+    dict_list.sort(reverse=True, key=sort_on)
+    return dict_list
